@@ -1,5 +1,5 @@
 # Metaverse Academy Project 
--- 요약
+-요약-
 
 - 1- 1 : numpy 작업 및 이미지 데이터 기초
 
