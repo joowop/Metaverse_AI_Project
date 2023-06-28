@@ -22,3 +22,7 @@
 - multi_label : 딥러닝 (multi_lable)데이터 처리 시 활용 알고리즘
 
 - CNN_fashion : CNN 기초 및 실습 (르넷 신경망 구성)
+
+- cifrar10-tf-cnn : cnn 실습 (정확도 올리기위한 작업 Dropout 등)
+
+- transfer learning : 전이학습 실습
