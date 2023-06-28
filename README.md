@@ -30,3 +30,5 @@
 - pytorch - 선형회귀 : pytorch 기초 및 보스턴 집값예측 선형회귀 실습
 
 - pytorch_mnist : pytorch_mnist 실습 및 모델 gpu설정
+
+- torch_lenet : torch_lenet으로 모델 구현하고 모델을 통해서 강사님이 주신 이미지 데이터로 추론해보기
