@@ -26,3 +26,5 @@
 - cifrar10-tf-cnn : cnn 실습 (정확도 올리기위한 작업 Dropout 등)
 
 - transfer learning : 전이학습 실습
+
+- pytorch - 선형회귀 : pytorch 기초 및 보스턴 집값예측 선형회귀 실습
