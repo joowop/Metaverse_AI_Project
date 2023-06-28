@@ -28,3 +28,5 @@
 - transfer learning : 전이학습 실습
 
 - pytorch - 선형회귀 : pytorch 기초 및 보스턴 집값예측 선형회귀 실습
+
+- pytorch_mnist : pytorch_mnist 실습 및 모델 gpu설정
