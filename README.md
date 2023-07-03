@@ -36,3 +36,5 @@
 - pytorch_cifar10 : cifar10 데이터 셋 활용하여 vgg 모델 직접 구현하여 모델 학습 실습 & TensorBoard 시각화 작업
 
 - resnet-pytorch : resnet을 활용하여 모델 구현 및 배치정규화 실습
+
+- resnet34_연예인분류기 : resnet 전이학습을 이용한 연예인 이미지 분류
