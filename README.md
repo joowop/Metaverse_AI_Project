@@ -34,3 +34,5 @@
 - torch_lenet : torch_lenet으로 모델 구현하고 모델을 통해서 강사님이 주신 이미지 데이터로 추론해보기
 
 - pytorch_cifar10 : cifar10 데이터 셋 활용하여 vgg 모델 직접 구현하여 모델 학습 실습 & TensorBoard 시각화 작업
+
+- resnet-pytorch : resnet을 활용하여 모델 구현 및 배치정규화 실습
