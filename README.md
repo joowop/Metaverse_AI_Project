@@ -55,3 +55,5 @@
 
 - chatbot : 기본적인 챗봇 생성 (기본 틀 구현)
 
+- Speech_Recognition : 음성인식 기능을 탑재한 챗봇 구현 실습
+
