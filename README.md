@@ -57,3 +57,11 @@
 
 - Speech_Recognition : 음성인식 기능을 탑재한 챗봇 구현 실습
 
+- kogpt2_finetuning : kogpt2_finetuning
+
+- mel_wav : 오디오 분류
+
+- 질의응답_bert : 질의응답_bert
+
+- 
+
