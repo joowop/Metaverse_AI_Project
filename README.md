@@ -63,5 +63,9 @@
 
 - 질의응답_bert : 질의응답_bert
 
+- main.py : open-cv day1
+
+- opencv-day2 : opencv-day2
+
 - 
 
