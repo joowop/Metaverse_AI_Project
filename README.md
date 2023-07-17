@@ -67,5 +67,5 @@
 
 - opencv-day2 : opencv-day2
 
-- 
+- opencv_day2 : opencv_day2 ( 이미지 마스킹, 직선, 원, 사각형, 다각형 등 그리기)
 
