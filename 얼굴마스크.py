@@ -21,6 +21,7 @@ faceimg = cv2.imread('face_mk.png', cv2.IMREAD_UNCHANGED)
 def face_overlay(background_img, img_to_overlay, x, y, overlay_size=None):
     try:
         bg_img = background_img.copy()
+        ov_img = img_to_overlay.copy()
         # backgorud img의 채널은 3채널(b,g,r) overlay의 이미지는 4채널이라 둘이 다르다.
         # backgorud img의 채널을 하나 늘려야한다.
         if bg_img.shape[2] == 3:
@@ -28,7 +29,7 @@ def face_overlay(background_img, img_to_overlay, x, y, overlay_size=None):
 
         # overlay_size는 가져올 이미지의 사이즈 조절
         if overlay_size is not None:
-            img_to_overlay = cv2.resize(img_to_overlay.copy(), overlay_size)
+            img_to_overlay = cv2.resize(ov_img, overlay_size)
 
         # b,g,r,a 채널로 순서 분류
         b,g,r,a = cv2.split(img_to_overlay)
@@ -39,14 +40,31 @@ def face_overlay(background_img, img_to_overlay, x, y, overlay_size=None):
         # 이미지 중심 좌표와 사람 얼굴 중심을 맞추기 위해 이미지 중심을 찾는다.
         h,w,_ = img_to_overlay.shape
 
-        roi = bg_img[int(y-h/2):int(y+h/2), int(x-w/2) : int(x+w/2)]
+        i_s = int(y - h / 2)
+        i_e = int(y + h / 2)
+        c_s = int(x - w / 2)
+        c_e = int(x + w / 2)
+
+        if i_s < 0:
+            i_s = 0
+        if i_e > bg_img.shape[0]:
+            i_e = bg_img.shape[0]
+        if c_s < 0:
+            c_s = 0
+        if c_e > bg_img.shape[1]:
+            c_e = bg_img.shape[1]
+
+        roi = bg_img[i_s:i_e,c_s :c_e]
+
+        print(roi.shape, mask.shape)
 
         # 관심영역에서 마스크 되어있는 픽셀 들만 가져와서 붙이면 된다.
         # img1_bg 미키마우스가 아닌 곳의 관심영역에서 img1_bg를 해준 이유는 색깔이 바뀌기 때문이다.
         img1_bg = cv2.bitwise_and(roi.copy(),roi.copy(), mask = cv2.bitwise_not(mask))
         img2_fg = cv2.bitwise_and(img_to_overlay, img_to_overlay, mask=mask)
 
-        bg_img[int(y-h/2):int(y+h/2), int(x-w/2) : int(x+w/2)] = cv2.add(img1_bg, img2_fg)
+        # 캠이미지에 마스크영역과 마스크를 제외해서 더한 결과값을 갱신
+        bg_img[i_s:i_e, c_s:c_e] = cv2.add(img1_bg, img2_fg)
 
         # a채널때문에 다시 바꿔줘
         bg_img = cv2.cvtColor(bg_img, cv2.COLOR_BGRA2RGB)
@@ -73,7 +91,7 @@ while True:
                 xy_point.append([lm.x, lm.y])
 
                 # 찾은 이미지를 점으로 표시 눈으로 한번 보자
-                img = cv2.circle(img,(int(lm.x*iw), int(lm.y*ih)), 1, (255,0,0), 3)
+                # img = cv2.circle(img,(int(lm.x*iw), int(lm.y*ih)), 1, (255,0,0), 3)
 
             # 얼굴 맨위 왼쪽
             top_left = np.min(xy_point, axis=0)
@@ -83,17 +101,20 @@ while True:
             mean_xy = np.mean(xy_point, axis=0)
 
             # 얼굴 가운데를 찾은곳을 빨간색으로 표시해보기
-            img = cv2.circle(img, (int(mean_xy[0]*iw), int(mean_xy[1]*ih)),4,(0,0,255),3)
+            # 얼굴 가운데를 찾은곳을 빨간색으로 표시해보기
+            # img = cv2.circle(img, (int(mean_xy[0]*iw), int(mean_xy[1]*ih)),4,(0,0,255),3)
 
-            face_width = int(bottom_right[0]*iw) - int(top_left[0]*iw)
+            face_width = int(bottom_right[0] * iw) - int(top_left[0] * iw)
             face_height = int(bottom_right[1] * ih) - int(top_left[1] * ih)
 
             if face_width > 0 and face_height > 0:
 
-                img = face_overlay(img, faceimg, int(mean_xy[0]*iw), int(mean_xy[1]*ih),overlay_size=(face_width+40, face_height+40))
+                result = face_overlay(img, faceimg,int(mean_xy[0]*iw),int(mean_xy[1]*ih),(face_width,face_height))
 
-    cv2.imshow('face', img)
-
+    try:
+        cv2.imshow('face', result)
+    except:
+        cv2.imshow('face', img)
     if cv2.waitKey(1) == ord('q'):
         break
 
