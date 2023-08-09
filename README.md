@@ -74,3 +74,5 @@
 - chroma_chatbot : chroma db를 테이블을 활용하여 챗봇의 응답속도 빠르게 함
 
 - face_ml : 얼굴 (happy, sad 분류 모델 구현), ML 활용
+
+- mediapipe_project 폴더 : mediapipe를 이용한 얼굴(happy, sad) 분류기
