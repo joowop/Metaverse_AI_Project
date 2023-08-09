@@ -72,3 +72,5 @@
 - 웹툰.ipynb : 웹툰에 있는 글자 ocr을 통해 추출하고 자동으로 번역 ( 클러스터링, 번역, ocr)
 
 - chroma_chatbot : chroma db를 테이블을 활용하여 챗봇의 응답속도 빠르게 함
+
+- face_ml : 얼굴 (happy, sad 분류 모델 구현), ML 활용
