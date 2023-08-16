@@ -43,36 +43,4 @@
 
 - pytorch-autoencoder : 오토인코더 개념 및 실습 (+ 3d환경에서의 시각화도 함.) 
 
-- conv2d-autoencoder : 오토인코더 실습 ( conv2d를 이용해서 직접 인코더 디코더 모델 구현하고 노이즈도 직접 추가해보면서 오토인코더 학습 및 실습)
-
-- 한글정수인코딩(NLP) : NLP 입문 ( 한글을 정수로 인코딩 해주기), 셀레니움 등으로 댓글 수집 웹 이미지 수집, 스크래핑 있는 파일 드라이브가 있음.
-
-- bow(NLP, 단어Counting) : TF-IDF 단어 인코딩 및 가중치 구하기
-
-- 긍부정분석 : 배달의 민족 댓글, 별점을 바탕으로 데이터 전처리(인코딩) 하여 머신러닝을 통해(LinearRegression) 댓글이 긍정적인지 부정적인지 판별하여 실시간으로 보여주는 모델 생성 실습
-
-- LDA_스노우: LDA 토픽 분석
-
-- chatbot : 기본적인 챗봇 생성 (기본 틀 구현)
-
-- Speech_Recognition : 음성인식 기능을 탑재한 챗봇 구현 실습
-
-- kogpt2_finetuning : kogpt2_finetuning
-
-- mel_wav : 오디오 분류
-
-- 질의응답_bert : 질의응답_bert
-
-- main.py : open-cv day1
-
-- opencv-day2 : opencv-day2
-
-- opencv_day2 : opencv_day2 ( 이미지 마스킹, 직선, 원, 사각형, 다각형 등 그리기)
-
-- 웹툰.ipynb : 웹툰에 있는 글자 ocr을 통해 추출하고 자동으로 번역 ( 클러스터링, 번역, ocr)
-
-- chroma_chatbot : chroma db를 테이블을 활용하여 챗봇의 응답속도 빠르게 함
-
-- face_ml : 얼굴 (happy, sad 분류 모델 구현), ML 활용
-
-- mediapipe_project 폴더 : mediapipe를 이용한 얼굴(happy, sad) 분류기
+- conv2d-autoencoder : 오토인코더 실습 ( conv2트
