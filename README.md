@@ -78,3 +78,5 @@
 - mediapipe_project 폴더 : mediapipe를 이용한 얼굴(happy, sad) 분류기
 
 - groundingdino:  groundingdino => yolo 편한 버전
+
+- clip : yolo 비슷
