@@ -80,3 +80,7 @@
 - groundingdino:  groundingdino => yolo 편한 버전
 
 - clip : yolo 비슷
+
+- 벡터DB : 크로마 디비로 vit
+
+- huggingface_vit : vit
