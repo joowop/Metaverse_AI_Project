@@ -84,3 +84,9 @@
 - 벡터DB : 크로마 디비로 vit
 
 - huggingface_vit : vit
+
+- fastsam : yolo clip 합쳐놓은것
+
+- sam : sam
+
+- u net : u net
