@@ -69,24 +69,4 @@
 
 - opencv_day2 : opencv_day2 ( 이미지 마스킹, 직선, 원, 사각형, 다각형 등 그리기)
 
-- 웹툰.ipynb : 웹툰에 있는 글자 ocr을 통해 추출하고 자동으로 번역 ( 클러스터링, 번역, ocr)
-
-- chroma_chatbot : chroma db를 테이블을 활용하여 챗봇의 응답속도 빠르게 함
-
-- face_ml : 얼굴 (happy, sad 분류 모델 구현), ML 활용
-
-- mediapipe_project 폴더 : mediapipe를 이용한 얼굴(happy, sad) 분류기
-
-- groundingdino:  groundingdino => yolo 편한 버전
-
-- clip : yolo 비슷
-
-- 벡터DB : 크로마 디비로 vit
-
-- huggingface_vit : vit
-
-- fastsam : yolo clip 합쳐놓은것
-
-- sam : sam
-
-- u net : u net
+- 웹툰.ipynb : 웹툰에 있는 글자 ocr을 통해 추출하고 자동으로 번역 (기
